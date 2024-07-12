@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Chat Sentiment",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_chat_sentiment.sh",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Start Face Sentiment",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_face_sentiment.sh",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Start Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_server.sh",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Start Client",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_client.sh",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Start All",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start Chat Sentiment",
+                "Start Face Sentiment",
+                "Start Server",
+                "Start Client"
+            ]
+        }
+    ]
+}
